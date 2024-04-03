@@ -16,6 +16,7 @@
         <div class="result__video-container">
           <video src="" controls class="result__video" poster=""></video>
         </div>
+
         <form class="search-form">
           <fieldset class="search-form__fieldset">
             <h2 class="search-form__fieldset-title">Город</h2>
@@ -29,8 +30,10 @@
               />
             </label>
           </fieldset>
+
           <fieldset class="search-form__fieldset">
             <h2 class="search-form__fieldset-title">Время суток</h2>
+
             <div class="search-form__checkbox-list">
               <label class="search-form__label">
                 <input
@@ -40,8 +43,9 @@
                   class="search-form__checkbox visually-hidden"
                 />
                 <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">Утро</span>
+                <span class="search-form__label-text hover-effect">Утро</span>
               </label>
+
               <label class="search-form__label">
                 <input
                   type="checkbox"
@@ -50,8 +54,9 @@
                   class="search-form__checkbox visually-hidden"
                 />
                 <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">День</span>
+                <span class="search-form__label-text hover-effect">День</span>
               </label>
+
               <label class="search-form__label">
                 <input
                   type="checkbox"
@@ -60,11 +65,15 @@
                   class="search-form__checkbox visually-hidden"
                 />
                 <span class="search-form__pseudo-checkbox"></span>
-                <span class="search-form__label-text">Ночь</span>
+                <span class="search-form__label-text hover-effect">Ночь</span>
               </label>
             </div>
           </fieldset>
-          <button type="submit" class="button search-form__submit-button">
+
+          <button
+            type="submit"
+            class="button search-form__submit-button hover-effect"
+          >
             Найти
           </button>
         </form>
