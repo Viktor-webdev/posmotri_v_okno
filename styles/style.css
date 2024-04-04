@@ -39,7 +39,7 @@ ol {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: inherit;
 }
 
 .visually-hidden {
@@ -55,8 +55,13 @@ a {
   overflow: hidden; /* на всякий случай скрывают видимое за пределами блока */
 }
 
-.hover-effect:hover {
+.hover-effect:hover,
+.hover-checkbox:hover > span:last-child {
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.pointer {
   cursor: pointer;
 }
 
@@ -65,7 +70,7 @@ a {
   display: grid;
   grid-template-columns: 711px 399px;
   column-gap: 30px;
-  margin: 133px auto 0;
+  margin: 80px auto 0;
 }
 
 .result__video-container {
@@ -81,7 +86,6 @@ a {
   border: none;
 }
 
-.search-form__fieldset-title,
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
@@ -97,12 +101,21 @@ a {
 }
 
 .search-form__textfield {
+  appearance: none;
   width: 235px;
   background-color: transparent;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   color: #fff;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
 }
 
 .search-form__textfield::placeholder {
@@ -126,7 +139,6 @@ a {
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: transparent;
   outline: 1px solid #fff;
   outline-offset: 1px;
   margin-right: 2px;
@@ -134,7 +146,6 @@ a {
 
 .search-form__checkbox:checked + span {
   background: #fff;
-  padding: 2px;
 }
 
 .button {
@@ -144,9 +155,21 @@ a {
   font-weight: 700;
   line-height: 22px;
   background-color: transparent;
-  padding: 6px 0;
   border: 1px solid #fff;
   cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
@@ -176,7 +199,7 @@ a {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  max-height: 315px;
+  max-height: 314px;
   overflow-x: hidden;
 }
 
@@ -186,8 +209,26 @@ a {
 }
 
 .content__video-card-description-container {
-  background-color: #545050;
   padding: 4px 2px;
+}
+
+.content__card-link_current,
+.content__card-link:active {
+  display: block;
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link {
+  display: block;
+  margin: 2px;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card-title {
@@ -208,4 +249,9 @@ a {
 
 .content__video-card-thumbnail {
   width: 100%;
+}
+
+.more-button {
+  width: 100%;
+  padding: 6px 0;
 }
