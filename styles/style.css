@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -70,7 +71,8 @@ a {
   display: grid;
   grid-template-columns: 711px 399px;
   column-gap: 30px;
-  margin: 80px auto 0;
+  /*margin: 20% auto 0;*/
+  margin: auto;
 }
 
 .result__video-container {
