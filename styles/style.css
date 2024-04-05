@@ -141,7 +141,9 @@ a {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
@@ -149,8 +151,9 @@ a {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
   content: '';
-  position: absolute; /* элемент вырывают из потока */
-  inset: 1px;
+  display: flex;
+  width: 16px;
+  height: 15px;
   background-color: #fff;
 }
 
