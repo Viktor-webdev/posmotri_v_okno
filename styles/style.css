@@ -149,7 +149,7 @@ a {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
   content: '';
-  position: absolute;
+  position: absolute; /* элемент вырывают из потока */
   inset: 1px;
   background-color: #fff;
 }
