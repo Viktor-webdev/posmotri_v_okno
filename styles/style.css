@@ -69,7 +69,7 @@ a {
 .content {
   max-width: 1140px;
   display: grid;
-  grid-template-columns: 711px 399px;
+  grid-template-columns: 710px 400px;
   column-gap: 30px;
   margin: auto;
 }
